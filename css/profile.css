@@ -1,17 +1,64 @@
-content{
-    text-align: center;
-    padding: 20px 50px
-}
-
 .renting-item{
     display: flex;
 }
-
-
 
 .house-img{
     background-image: url("../img/house2.jpg");
     background-size: cover;
     width: 30%;
     height: 400px;
+    
+}
+
+.house-detail{
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.house-title{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.renting-fee{
+    width: 50%;
+    
+}
+.house-addr{
+    width: 100%;
+}
+.house-cagetory,
+.renting-fee,
+.house-period
+{
+    width: 50%;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.house-period{
+    width: 100%;
+}
+
+.contact-title{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.owner-info{
+    width: 50%;
+}
+.contact-method{
+    width: 50%;
+}
+
+.contact-method a{
+    font-size: 0.8em;
+    margin-left: 10px;
 }
