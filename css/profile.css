@@ -1,0 +1,17 @@
+content{
+    text-align: center;
+    padding: 20px 50px
+}
+
+.renting-item{
+    display: flex;
+}
+
+
+
+.house-img{
+    background-image: url("../img/house2.jpg");
+    background-size: cover;
+    width: 30%;
+    height: 400px;
+}
