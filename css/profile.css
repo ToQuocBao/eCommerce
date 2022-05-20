@@ -1,3 +1,41 @@
+h2{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bolder;
+    margin: 50px 0;
+}
+
+.user-pf{
+    width: 100%;
+}
+
+.user-pf .form-field{
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+}
+.user-pf .form-field label{
+    width: 40%;
+}
+
+.user-pf .form-field input{
+    width: 60%;
+    height: 40px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #00d1ff;
+}
+
+.user-pf .form-field input:focus{
+    border: 1px solid #00d1ff;
+}
+
+.form-btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .renting-item{
     display: flex;
 }
