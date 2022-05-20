@@ -14,6 +14,21 @@ body{
     width: 100%;
 }
 
+.content{
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+span{
+    display: inline;
+}
+
+.clear{
+    float: left;
+    clear: both;
+}
+
 a{
     display: inline;
     color: black;
@@ -28,6 +43,7 @@ a{
     text-align: center;
 }
 
+
 .btn{
     background-color: #00D1FF;
     color: white;
@@ -40,7 +56,11 @@ a{
     border: 1px solid var(--theme-color);
 }
 
-
+.btn:hover, .btn-alter:hover{
+    opacity: 0.6;
+    background-color: #00d0ff;
+    color: white;
+}
 
 .header{
     height: 130px;
@@ -78,6 +98,10 @@ a{
     border: none;
 }
 
+.header .search-bar input:focus-visible{
+    outline: none
+}
+
 .header .lease-btn{
     font-style: italic;
     position: absolute;
@@ -112,6 +136,11 @@ a{
     color: white;
     font-weight: 700;
     margin: 0 50px;
+}
+
+.footer .contact:hover, .footer .aboutus:hover{
+    /* opacity: 0.8; */
+    background-color: #11DDFF;
 }
 
 .footer .social-icons{

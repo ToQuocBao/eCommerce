@@ -21,6 +21,10 @@
     border-bottom: 1px solid black;
 }
 
+.filter .cagetory-filter input{
+    transform: scale(1.5);
+}
+
 .filter .title{
     margin-bottom: 20px;
     margin-left: 0px;
@@ -76,6 +80,10 @@
     position: relative;
 }
 
+.house-list .house-item:hover{
+    opacity: 0.8;
+}
+
 .house-item .house-img .house-status{
     height: 30px;
     line-height: 30px;
@@ -111,4 +119,23 @@
     height: 100px;
     overflow-y: hidden;
     
+}
+
+.house-list .page-numbers{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.house-list .page-numbers .page-number-cell{
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+}
+.house-list .page-numbers .page-number-cell:hover{
+    background-color: #dddddd;
 }
