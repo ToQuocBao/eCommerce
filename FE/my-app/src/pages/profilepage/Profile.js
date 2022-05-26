@@ -1,3 +1,5 @@
+import './profile.css'
+
 function Profile() {
     return(
         <div class="content">
@@ -64,10 +66,10 @@ function Profile() {
                             <div class="contact-method">
                                 Phương thức liên lạc
                                 <ul>
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Zalo</a></li>
-                                    <li><a href="#">email</a></li>
-                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="./">Facebook</a></li>
+                                    <li><a href="./">Zalo</a></li>
+                                    <li><a href="./">email</a></li>
+                                    <li><a href="./">Twitter</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -101,10 +103,10 @@ function Profile() {
                             <div class="contact-method">
                                 Phương thức liên lạc
                                 <ul>
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Zalo</a></li>
-                                    <li><a href="#">email</a></li>
-                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="./">Facebook</a></li>
+                                    <li><a href="./">Zalo</a></li>
+                                    <li><a href="./">email</a></li>
+                                    <li><a href="./">Twitter</a></li>
                                 </ul>
                             </div>
                         </div>

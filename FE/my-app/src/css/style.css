@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    box-sizing: border-box;
+    display: block;
+}
+
+:root{
+    --theme-color: #888888;
+    --theme-secondary-color: #999999;
+    --status-available-color:#00D1FF;
+    --status-nearly-color: #FF4D00;
+    --status-not-color: #FF0000;
+}
+
+body{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+span{
+    display: inline;
+}
+
+.clear{
+    float: left;
+    clear: both;
+}
+
+a{
+    display: inline;
+    color: black;
+    text-decoration: none;
+}
+.btn, .btn-alter{
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 40px;
+    line-height: 48px;
+    text-align: center;
+}
+
+
+.btn{
+    background-color: var(--theme-color);
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-alter{
+    background-color: white;
+    color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+}
+
+.btn:hover, .btn-alter:hover{
+    opacity: 0.6;
+    background-color: var(--theme-secondary-color);
+    color: white;
+}
+
+.header{
+    height: 130px;
+    width: 100;
+    color: white;
+    background-color: var(--theme-color);
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    
+    /* position: relative; */
+}
+
+.header .header-icon{
+    height: 130px;
+    width: 130px;
+    padding: 20px;
+    background-image: url("../img/icons/home.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header .search-bar{
+    display: inline-block;
+    margin: 40px;
+    height: 50px;
+    width: 40%;
+    min-width: 200px;
+    border-radius: 25px;
+    border: 1px solid white;
+}
+
+.header .search-bar input{
+    height: 50px;
+    line-height: 50px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 25px;
+    font-size: 1.2em;
+    border: none;
+}
+
+.header .search-bar input:focus-visible{
+    outline: none
+}
+
+.header .lease-btn{
+    font-style: italic;
+    /* position: absolute; */
+    top: 0;
+    width: 150px;
+    /* right: 350px */
+}
+
+.header .cart-btn{
+    font-style: italic;
+    /* position: absolute; */
+    top: 0;
+    width: 150px;
+    /* right: 520px */
+}
+
+.header .cart-btn .cart-icon{
+    height:  25px;
+    display: inline-block;
+    background-image: url("../img/icons/cart.png");
+}
+
+.header .account-btn{
+    height: 70px;
+    margin: 30px;
+    line-height: 68px;
+    border-radius: 35px;
+    font-size: 1.2em;
+    /* position: absolute; */
+    top: 0;
+    /* right: 50px */
+}
+
+.footer{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: var(--theme-color);
+}
+
+.footer .contact, .footer .aboutus{
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin: 0 50px;
+}
+
+.footer .contact:hover, .footer .aboutus:hover{
+    /* opacity: 0.8; */
+    background-color: var(--theme-secondary-color);
+}
+
+.footer .social-icons{
+    width: calc(40% - 300px);
+    margin: 0 50px;
+    line-height: 100px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.footer .icon{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.footer a{
+    display: block;
+    margin: auto;
+    width: 33%;
+}
+
+.footer .social-icons a{
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+}
+.footer .fb-icon{
+    background-image: url("../img/icons/fb.jpg");
+    background-size: 100px;
+    background-position: center;
+}
+
+.footer .youtube-icon{
+    background-image: url("../img/icons/utube.png");
+    background-size: 65px;
+    background-position: center;
+}
+
+.footer .twitter-icon{
+    background-image: url("../img/icons/twitter.jpg");
+    background-size: 60px;
+    background-position: center;
+}
+
+.footer .zalo-icon{
+    background-image: url("../img/icons/zalo.jpg");
+    background-size: 60px;
+    background-position: center;
+}
