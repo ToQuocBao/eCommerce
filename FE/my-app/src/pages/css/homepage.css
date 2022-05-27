@@ -1,0 +1,159 @@
+
+.home-page{
+    display: flex;
+    width: 100%;;
+}
+
+.filter{
+    width: 25%;
+    /* flex: 1; */
+    min-width: 260px;
+    height: fit-content;
+    border-right: 1px solid var(--theme-color);
+}
+
+.filter .cagetory-filter,
+.filter .area-filter,
+.filter .fee-filter{
+    margin: 20px auto;
+    padding-bottom: 40px;
+    width: 240px;
+    border-bottom: 1px solid black;
+}
+
+.filter .cagetory-filter input{
+    transform: scale(1.5);
+}
+
+.filter .title{
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+
+.filter input, label{
+    line-height: 28px;
+    height: 30px;
+    display: inline;
+}
+
+.filter input{
+    margin: 5px 20px;
+    height: 16px;
+}
+
+.filter select{
+    margin: 10px 20px;
+    height: 30px;
+    line-height: 28px;
+    width: 180px;
+    border-radius: 15px;
+}
+
+.filter .fee-filter input{
+    margin: 10px 20px;
+    height: 30px;
+    line-height: 28px;
+    width: 180px;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+
+.house-list{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding: 40px 40px;
+}
+
+.house-list .house-item{
+    width: 30%;
+    height: 360px;
+    margin: 1%;
+}
+
+.house-list .house-item .house-img{
+    width: 100%;
+    height: 180px;
+    background-image: url("../img/house1.jpg");
+    background-size:cover;
+    position: relative;
+}
+
+.house-list .house-item:hover{
+    opacity: 0.8;
+}
+
+.house-item .house-img .house-status{
+    height: 30px;
+    line-height: 30px;
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 0 20px;
+    opacity: 75%;
+}
+
+.ready{
+    background-color: var(--status-available-color);
+}
+
+.nearly{
+    background-color: var(--status-nearly-color);
+}
+
+.far{
+    background-color: var(--status-not-color);
+}
+
+.house-list .house-item .house-addr{
+    display: block;
+    height: 40px;
+    font-size: 0.8em;
+    font-style: italic;
+    /* line-height: 18px; */
+    color: rgba(55, 55, 55, 1);
+    text-align: right;
+}
+.house-list .house-item .house-title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.house-list .house-item .house-price{
+    font-size: 0.8em;
+    font-style: italic;
+    color: var(--theme-color);
+}
+
+
+.house-list .house-item .house-desc{
+    text-align: justify;
+    height: 100px;
+    overflow-y: hidden;
+    
+}
+
+.house-list .page-numbers{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.house-list .page-numbers .page-number-cell{
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+}
+.house-list .page-numbers .page-number-cell:hover{
+    background-color: #dddddd;
+}

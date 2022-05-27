@@ -1,0 +1,102 @@
+h2{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bolder;
+    margin: 50px 0;
+}
+
+.user-pf{
+    width: 100%;
+}
+
+.user-pf .form-field{
+    display: flex;
+    width: 60%;
+    margin: 20px auto;
+}
+.user-pf .form-field label{
+    width: 40%;
+}
+
+.user-pf .form-field input{
+    width: 60%;
+    height: 40px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--theme-color);
+}
+
+.user-pf .form-field input:focus{
+    border: 1px solid var(--theme-color);
+}
+
+.form-btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.renting-item{
+    display: flex;
+}
+
+.house-img{
+    background-image: url("../img/house2.jpg");
+    background-size: cover;
+    width: 30%;
+    height: 400px;
+    
+}
+
+.phouse-detail{
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.house-title{
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.renting-fee{
+    width: 50%;
+    
+}
+.house-addr{
+    width: 100%;
+}
+.house-cagetory,
+.renting-fee,
+.house-period
+{
+    width: 50%;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.house-period{
+    width: 100%;
+}
+
+.contact-title{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.owner-info{
+    width: 50%;
+}
+.contact-method{
+    width: 50%;
+}
+
+.contact-method a{
+    font-size: 0.8em;
+    margin-left: 10px;
+}

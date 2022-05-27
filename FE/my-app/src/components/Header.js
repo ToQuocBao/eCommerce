@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { Link } from 'react-router-dom';
 import {LoginContext} from './Context'
 
 
@@ -7,33 +8,33 @@ function Header() {
     const {login, setLogin} = useContext(LoginContext);
 
     return(
-        <div class="header">
-            <a href="../"><div class="header-icon">
-            </div></a>
-            <div class="search-bar">
+        <div className="header">
+            <Link to="/"><div className="header-icon">
+            </div></Link>
+            <div className="search-bar">
                 <input type="text" placeholder="Tân bình, Tp HCM..."/>
             </div>
-            <a href="../Posting/"><div class="lease-btn btn">
+            <Link to="/Posting"><div className="lease-btn btn">
                 Cho thuê
-            </div></a>
-            <a href="../Cart/"><div class="cart-btn btn">
-                <div class="cart-icon"></div>
+            </div></Link>
+            <Link to="/Cart"><div className="cart-btn btn">
+                <div className="cart-icon"></div>
                 Giỏ hàng
-            </div></a>
-            {login.isLoggedIn?
+            </div></Link>
+            {login?
             <div id="account-btn">
-                {/* <a href="../Profile/"> */}
-                    <div class="account-btn btn-alter">
+                <Link to = "/Profile">
+                    <div className="account-btn btn-alter">
                     Lonhhhh
                     </div>
-                {/* </a> */}
+                </Link>
             </div>
-            :<div id="account-btn" onClick={()=>setLogin({isLoggedIn: true, ...login})}>
-                {/* <a href="../LogIn/"> */}
-                    <div class="account-btn btn-alter">
+            :<div id="account-btn">
+                <Link to="/LogIn">
+                    <div className="account-btn btn-alter">
                     Đăng nhập
                     </div>
-                {/* </a> */}
+                </Link>
             </div>
             }
         </div>

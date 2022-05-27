@@ -1,17 +1,19 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
     return(
-        <div class="footer">
-            <a href="./Contact/"><div class="contact">
+        <div className="footer">
+            <Link to="/Contact"><div className="contact">
                 LIÊN LẠC
-            </div></a>
-            <a href="./AboutUs/"><div class="aboutus">
+            </div></Link>
+            <Link to="/AboutUs"><div className="aboutus">
                 VỀ CHÚNG TÔI
-            </div></a>
-            <div class="social-icons">
-                <a href="./"><div class="fb-icon icon"></div></a>
-                <a href="./"><div class="youtube-icon icon"></div></a>
-                <a href="./"><div class="twitter-icon icon"></div></a>
-                <a href="./"><div class="zalo-icon icon"></div></a>
+            </div></Link>
+            <div className="social-icons">
+                <a href="./"><div className="fb-icon icon"></div></a>
+                <a href="./"><div className="youtube-icon icon"></div></a>
+                <a href="./"><div className="twitter-icon icon"></div></a>
+                <a href="./"><div className="zalo-icon icon"></div></a>
             </div>
         </div>
     )
