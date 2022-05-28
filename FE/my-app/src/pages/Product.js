@@ -1,7 +1,9 @@
 import './css/product.css'
 import { useParams } from 'react-router-dom'
 import data from '../components/data';
-import users from '../components/users';
+import users from './components/users';
+
+
 function HouseDetail(props) {
 
     return (
@@ -67,6 +69,7 @@ function HouseImg(props){
 }
 
 function HouseInfo(props){
+    console.log(props.houseInfo)
     return (
     <div class="house-info">
         <div class="row">
@@ -92,6 +95,8 @@ function HouseInfo(props){
 function Product(props){
     let {id} = useParams(); 
     console.log(id)
+    console.log(data.data[id])
+    console.log(data.data[id])
     return (
     <div class="content">
         <HouseInfo houseInfo = {data.data[id]}/>

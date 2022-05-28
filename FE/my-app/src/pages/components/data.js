@@ -44,7 +44,7 @@ function generateSample(){
                 email: "",
                 twitter: ""
             },
-            deposite: 0,
+            deposite: randomItem(priceSample) * 2,
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique, dolor sed viverra rutrum, velit ex efficitur tellus, ut sodales neque felis eu lectus.",
             img: ['house1.jpg', 'house2.jpg', 'house3.jpg'],
             onwer: Math.floor(Math.random()*20),

@@ -30,6 +30,7 @@ function generateSample(){
     for (var i = 0; i < 21; i++){
         var item = {
             id: i,
+            name: "Lonh" + i.toString(),
             dob: Date("01/01/0001"),
             username: 'username' + i.toString(),
             password: 'password' + i.toString(),
@@ -46,4 +47,4 @@ function generateSample(){
 
 generateSample()
 
-export default {users}
+export default users
