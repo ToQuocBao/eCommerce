@@ -19,7 +19,10 @@ function HomePage(){
             floor: 0
         }
     });
-    console.log(filter)
+    // console.log(filter)
+
+    
+
     return( 
     <div class = "home-page">
         <div class = "filter">
@@ -28,13 +31,16 @@ function HomePage(){
                     LOẠI NHÀ
                 </h2>
                 <input type="checkbox" id="boarding" name="boarding" value="boarding" onChange={()=>{
-                    setFilter({cagetory: {boarding: true, ...filter.cagetory},...filter});
-                    console.log(filter)
+                    setFilter({...filter, cagetory: {...filter.cagetory, boarding: !filter.cagetory.boarding}});
                 }}/>
                 <label for="boarding"> Nhà trọ</label><br/>
-                <input type="checkbox" id="apartment" name="apartment" value="apartment"/>
+                <input type="checkbox" id="apartment" name="apartment" value="apartment" onChange={()=>{
+                    setFilter({...filter, cagetory: {...filter.cagetory, apartment: !filter.cagetory.apartment}});
+                }}/>
                 <label for="apartment"> Chung cư</label><br/>
-                <input type="checkbox" id="selling" name="selling" value="selling"/>
+                <input type="checkbox" id="selling" name="selling" value="selling" onChange={()=>{
+                    setFilter({...filter, cagetory: {...filter.cagetory, selling: !filter.cagetory.selling}});
+                }}/>
                 <label for="selling"> Nhà bán</label>
             </div>
             <div action="" class="area-filter">
@@ -42,7 +48,9 @@ function HomePage(){
                     KHU VỰC
                 </h2>
                 <label for="province">Tỉnh:</label>
-                <select name="province" id="province">
+                <select name="province" id="province" onChange={(e)=>{
+                    setFilter({...filter, area: {...filter.area, province: e.target.value}});
+                }}>
                     <option value=""></option>
                     <option value="Tp Hồ Chí Minh">Tp HCM</option>
                     <option value="Hà Nội">Hà Nội</option>
@@ -73,12 +81,16 @@ function HomePage(){
                     Chi phí
                 </h2>
                 <label for="floor">Từ:</label>
-                <input type="number" name="floor" id="floor"/>
+                <input type="number" name="floor" id="floor" onChange={(e)=>{
+                    setFilter({...filter, price: {...filter.price, floor: e.target.value}});
+                }}/>
                 <label for="cell">Đến:</label>
-                <input type="number" name="cell" id="cell"/>
+                <input type="number" name="cell" id="cell" onChange={(e)=>{
+                    setFilter({...filter, price: {...filter.price, ceil: e.target.value}});
+                }}/>
             </div>
         </div>
-        <HouseList/>
+        <HouseList filter = {filter}/>
     </div>
     )
 }
