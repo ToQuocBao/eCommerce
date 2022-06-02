@@ -23,12 +23,6 @@ app.use(
 app.use(express.json());
 
 
-
-const x = {
-    id: 1,
-    name: 'long',
-}
-
 app.post('/pay', (req, res) => {
     const create_payment_json = {
         "intent": "sale",
@@ -36,8 +30,8 @@ app.post('/pay', (req, res) => {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/success",
-            "cancel_url": "http://localhost:3000/cancel"
+            "return_url": "http://localhost:4000/success",
+            "cancel_url": "http://localhost:4000/cancel"
         },
         "transactions": [{
             "item_list": {
@@ -55,12 +49,29 @@ app.post('/pay', (req, res) => {
             },
             "description": "Iphone 4S cũ giá siêu rẻ"
         }]
+        // "transactions": [{
+        //     "item_list": {
+        //         "items": [{
+        //             "name": info.title.toString(),
+        //             "id": info.id.toString(),
+        //             "price": (info.price/23205).toString(),
+        //             "currency": "USD",
+        //             // "quantity": 1
+        //         }]
+        //     },
+        //     "amount": {
+        //         "currency": "USD",
+        //         "total": (info.price/23205).toString()
+        //     },
+        //     "description": info.title.toString()
+        // }]
     };
 
     paypal.payment.create(create_payment_json, function (error, payment) {
         if (error) {
             throw error;
         } else {
+            console.log("hello")
             for (let i = 0; i < payment.links.length; i++) {
                 if (payment.links[i].rel === 'approval_url') {
                     res.redirect(payment.links[i].href);

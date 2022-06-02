@@ -15,11 +15,10 @@ function HouseDetail(props) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                firstParam: 'yourValue',
-                secondParam: 'yourOtherValue',
+                houseInfo: props.houseInfo
             })
         };
-        const response = await fetch('http://127.0.0.1:4000/testing', requestOptions);
+        const response = await fetch('http://127.0.0.1:4000/pay', requestOptions);
         const data = await response.json();
         // this.setState({ postId: data.id });
         console.log(data);
