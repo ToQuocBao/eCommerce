@@ -2,9 +2,28 @@ import './css/product.css'
 import { useParams } from 'react-router-dom'
 import data from '../components/data';
 import users from './components/users';
-
+import axios from 'axios';
 
 function HouseDetail(props) {
+
+    async function makePayment(){
+        // const response = await fetch('http://127.0.0.1:4000/');
+        // const data = await response.json();
+        // console.log(data);
+        console.log(props);
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                firstParam: 'yourValue',
+                secondParam: 'yourOtherValue',
+            })
+        };
+        const response = await fetch('http://127.0.0.1:4000/testing', requestOptions);
+        const data = await response.json();
+        // this.setState({ postId: data.id });
+        console.log(data);
+    }
 
     return (
         <div class="house-detail">
@@ -43,7 +62,7 @@ function HouseDetail(props) {
             </div>
             <div class="deposit-fee">Phí đặt cọc: 9000000đ</div>
             <div class="product-btns">
-                <div class="btn pay-btn">Đặt cọc ngay</div>
+                <div class="btn pay-btn" onClick={makePayment}>Đặt cọc ngay</div>
                 <div class="btn-alter add2cart-btn">Thêm vào giỏ hàng</div>
             </div>
         </div>
@@ -69,7 +88,6 @@ function HouseImg(props){
 }
 
 function HouseInfo(props){
-    console.log(props.houseInfo)
     return (
     <div class="house-info">
         <div class="row">
@@ -94,9 +112,6 @@ function HouseInfo(props){
 
 function Product(props){
     let {id} = useParams(); 
-    console.log(id)
-    console.log(data.data[id])
-    console.log(data.data[id])
     return (
     <div class="content">
         <HouseInfo houseInfo = {data.data[id]}/>
